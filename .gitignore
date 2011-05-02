@@ -22,3 +22,9 @@ Thumbs.db
 *.pidb
 <<<<<<< HEAD
 *.userprefs
+Source/Mangifera/Bin/*
+Source/Mangifera/obj/*
+Source/Mangifera.Tests/Bin/*
+Source/Mangifera.Tests/obj/*
+Source/Mangifera.Tests.Web/Bin/*
+Source/Mangifera.Tests.Web/obj/*
