@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010 Express for Windows Phone
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mangifera", "Mangifera/Mangifera.csproj", "{4F24CD01-CA09-4D16-AF8B-76EC3859F28B}"
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mangifera", "Mangifera\Mangifera.csproj", "{4F24CD01-CA09-4D16-AF8B-76EC3859F28B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mangifera.Tests", "Mangifera.Tests\Mangifera.Tests.csproj", "{9B316C30-981D-4FF7-807B-410BEE628AF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mangifera.Tests.Web", "Mangifera.Tests.Web\Mangifera.Tests.Web.csproj", "{F61266A9-DCD8-4B81-8AA0-348D9DABA654}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +17,14 @@ Global
 		{4F24CD01-CA09-4D16-AF8B-76EC3859F28B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F24CD01-CA09-4D16-AF8B-76EC3859F28B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F24CD01-CA09-4D16-AF8B-76EC3859F28B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B316C30-981D-4FF7-807B-410BEE628AF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B316C30-981D-4FF7-807B-410BEE628AF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B316C30-981D-4FF7-807B-410BEE628AF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B316C30-981D-4FF7-807B-410BEE628AF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F61266A9-DCD8-4B81-8AA0-348D9DABA654}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F61266A9-DCD8-4B81-8AA0-348D9DABA654}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F61266A9-DCD8-4B81-8AA0-348D9DABA654}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F61266A9-DCD8-4B81-8AA0-348D9DABA654}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

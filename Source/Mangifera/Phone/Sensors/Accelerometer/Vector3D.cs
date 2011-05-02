@@ -1,17 +1,8 @@
 ﻿using System;
-using System.Net;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Documents;
-using System.Windows.Ink;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Shapes;
 
-namespace Mangifera.Sensors.Accelerometer
+namespace Mangifera.Phone.Sensors.Accelerometer
 {
-    public struct Vector3D
+    public struct Vector3D : IEquatable<Vector3D>
     {
         /// <summary>
         /// X coordinate
@@ -29,22 +20,15 @@ namespace Mangifera.Sensors.Accelerometer
         public double Z { get; set; }
 
         /// <summary>
-        /// Default constructor
-        /// </summary>
-        public Vector3D()
-        {
-        }
-
-        /// <summary>
         /// Overloaded constructor to set values
         /// </summary>
         /// <param name="x">Initial X Value</param>
         /// <param name="y">Initial Y Value</param>
         /// <param name="z">Initial Z Value</param>
-        public Vector3D(double x, double y, double z)
+        public Vector3D(double x, double y, double z) : this()
         {
             X = x;
-            Y = x;
+            Y = y;
             Z = z;
         }
 
@@ -58,16 +42,6 @@ namespace Mangifera.Sensors.Accelerometer
         /// <returns></returns>
         public static bool operator ==(Vector3D v1, Vector3D v2)
         {
-            // check for null
-            if (v1 == null && v2 == null)
-            {
-                return true;
-            } 
-            else if (v1 == null || v2 == null)
-            {
-                return false;
-            }
-
             return (v1.X == v2.X) && (v1.Y == v2.Y) && (v1.Z == v2.Z);
         }
 
@@ -128,5 +102,31 @@ namespace Mangifera.Sensors.Accelerometer
 
 #endregion
 
+        #region Equality
+
+        public bool Equals(Vector3D other)
+        {
+            return other.X.Equals(X) && other.Y.Equals(Y) && other.Z.Equals(Z);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (obj.GetType() != typeof (Vector3D)) return false;
+            return Equals((Vector3D) obj);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                int result = X.GetHashCode();
+                result = (result*397) ^ Y.GetHashCode();
+                result = (result*397) ^ Z.GetHashCode();
+                return result;
+            }
+        }
+
+        #endregion
     }
 }
