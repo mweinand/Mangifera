@@ -41,6 +41,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Devices.Sensors" />
     <Reference Include="Microsoft.Phone" />
     <Reference Include="System.Windows" />
     <Reference Include="system" />
@@ -58,6 +59,11 @@
     <Compile Include="Navigation\INavigationServiceWrapper.cs" />
     <Compile Include="Phone\ISettingsManager.cs" />
     <Compile Include="Phone\Licensing\ITrialService.cs" />
+    <Compile Include="Phone\Sensors\Accelerometer\AccelerometerWrapper.cs" />
+    <Compile Include="Phone\Sensors\Accelerometer\AccelerometerReading.cs" />
+    <Compile Include="Phone\Sensors\Accelerometer\AverageAccelerationFilter.cs" />
+    <Compile Include="Phone\Sensors\Accelerometer\IAccelerometerWrapper.cs" />
+    <Compile Include="Phone\Sensors\Accelerometer\LowPassAccelerationFilter.cs" />
     <Compile Include="Phone\UI\DialogService.cs" />
     <Compile Include="Phone\UI\IDialogService.cs" />
     <Compile Include="Phone\Licensing\TrialService.cs" />

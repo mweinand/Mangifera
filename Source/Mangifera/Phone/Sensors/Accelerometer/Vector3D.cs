@@ -100,6 +100,11 @@ namespace Mangifera.Phone.Sensors.Accelerometer
             return new Vector3D(v1.X * d, v1.Y * d, v1.Z * d);
         }
 
+        public static Vector3D operator *(double d, Vector3D v1)
+        {
+            return v1 * d;
+        }
+
 #endregion
 
         #region Equality
@@ -128,5 +133,11 @@ namespace Mangifera.Phone.Sensors.Accelerometer
         }
 
         #endregion
+
+
+        public override string ToString()
+        {
+            return String.Format("{0}, {1}, {2}", X, Y, Z);
+        }
     }
 }

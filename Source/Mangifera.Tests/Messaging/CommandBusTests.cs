@@ -1,3 +1,4 @@
+using System.Threading;
 using Mangifera.Messaging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -17,6 +18,8 @@ namespace Mangifera.Tests.Messaging
 
             commandBus.PublishCommand(command);
 
+            Thread.Sleep(500); // wait for command thread to execute
+
             Assert.IsTrue(command.WasHandled);
         }
 
@@ -32,6 +35,8 @@ namespace Mangifera.Tests.Messaging
                                                         });
 
             commandBus.PublishCommand(command);
+
+            Thread.Sleep(500); // wait for command thread to execute
 
             Assert.IsTrue(command.WasHandled);
 
