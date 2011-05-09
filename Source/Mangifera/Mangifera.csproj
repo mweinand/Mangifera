@@ -43,6 +43,7 @@
   <ItemGroup>
     <Reference Include="Microsoft.Devices.Sensors" />
     <Reference Include="Microsoft.Phone" />
+    <Reference Include="System.Device" />
     <Reference Include="System.Windows" />
     <Reference Include="system" />
     <Reference Include="System.Core" />
@@ -66,6 +67,9 @@
     <Compile Include="Phone\Sensors\Accelerometer\AverageAccelerationFilter.cs" />
     <Compile Include="Phone\Sensors\Accelerometer\IAccelerometerWrapper.cs" />
     <Compile Include="Phone\Sensors\Accelerometer\LowPassAccelerationFilter.cs" />
+    <Compile Include="Phone\Sensors\Location\ILocationWrapper.cs" />
+    <Compile Include="Phone\Sensors\Location\LocationReading.cs" />
+    <Compile Include="Phone\Sensors\Location\LocationWrapper.cs" />
     <Compile Include="Phone\UI\DialogService.cs" />
     <Compile Include="Phone\UI\IDialogService.cs" />
     <Compile Include="Phone\Licensing\TrialService.cs" />
