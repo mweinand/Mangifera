@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading;
+using System.Reflection;
 
 namespace Mangifera.Messaging
 {
@@ -31,6 +32,12 @@ namespace Mangifera.Messaging
                 _store.Add(commandType, new List<object>());
             }
             _store[commandType].Add(action);
+        }
+
+        public void PublishCommand<TCommand>() where TCommand : ICommand
+        {
+            var command = (TCommand)Activator.CreateInstance(typeof(TCommand));
+            PublishCommand(command);
         }
 
         public void PublishCommand<TCommand>(TCommand command) where TCommand : ICommand

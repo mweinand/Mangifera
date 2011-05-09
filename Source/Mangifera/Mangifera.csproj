@@ -56,6 +56,8 @@
     <Compile Include="Messaging\ICommand.cs" />
     <Compile Include="Messaging\ICommandBus.cs" />
     <Compile Include="Messaging\ICommandHandler.cs" />
+    <Compile Include="Messaging\Scheduler\CommandScheduler.cs" />
+    <Compile Include="Messaging\Scheduler\ICommandScheduler.cs" />
     <Compile Include="Navigation\INavigationServiceWrapper.cs" />
     <Compile Include="Phone\ISettingsManager.cs" />
     <Compile Include="Phone\Licensing\ITrialService.cs" />
