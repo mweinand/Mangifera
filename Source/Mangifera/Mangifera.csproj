@@ -44,6 +44,7 @@
     <Reference Include="Microsoft.Devices.Sensors" />
     <Reference Include="Microsoft.Phone" />
     <Reference Include="System.Device" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Windows" />
     <Reference Include="system" />
     <Reference Include="System.Core" />
@@ -73,6 +74,7 @@
     <Compile Include="Phone\UI\DialogService.cs" />
     <Compile Include="Phone\UI\IDialogService.cs" />
     <Compile Include="Phone\Licensing\TrialService.cs" />
+    <Compile Include="Threading\IBackgroundThreadInvoker.cs" />
     <Compile Include="Threading\IUIThreadInvoker.cs" />
     <Compile Include="Phone\SettingsManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

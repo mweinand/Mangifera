@@ -13,7 +13,7 @@ namespace Mangifera.Phone.UI
 
         public void Alert(string message)
         {
-            MessageBox.Show(message, "Message", MessageBoxButton.OK);
+            MessageBox.Show(message, "Message", MessageBoxButton.OK);            
         }
     }
 }

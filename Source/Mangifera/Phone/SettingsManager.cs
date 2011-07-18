@@ -25,6 +25,15 @@ namespace Mangifera.Phone
             }
         }
 
+        public void Remove(string name)
+        {
+            if (!IsolatedStorageSettings.ApplicationSettings.Contains(name))
+            {
+                return;
+            }
+            IsolatedStorageSettings.ApplicationSettings.Remove(name);
+        }
+
         public void Save()
         {
             IsolatedStorageSettings.ApplicationSettings.Save();
