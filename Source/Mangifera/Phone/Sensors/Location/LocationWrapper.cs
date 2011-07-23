@@ -9,9 +9,13 @@ namespace Mangifera.Phone.Sensors.Location
         private LocationReading _lastReading;
         private GeoPositionStatus _status;
 
-        public LocationWrapper()
+        public LocationWrapper() : this(GeoPositionAccuracy.Default, 0.5)
         {
-            _watcher = new GeoCoordinateWatcher(GeoPositionAccuracy.Default) {MovementThreshold = 0.1};
+        }
+
+        public LocationWrapper(GeoPositionAccuracy accuracy, double movementThreshold)
+        {
+            _watcher = new GeoCoordinateWatcher(accuracy) { MovementThreshold = movementThreshold };
             _watcher.StatusChanged += WatcherStatusChanged;
             _watcher.PositionChanged += WatcherPositionChanged;
         }
@@ -47,7 +51,7 @@ namespace Mangifera.Phone.Sensors.Location
         {
             if(_status != GeoPositionStatus.Ready)
             {
-                throw new Exception("Could not get location data. Please check the status.");
+                return null;
             }
             return _lastReading;
         }

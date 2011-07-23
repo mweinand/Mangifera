@@ -43,7 +43,7 @@ namespace Mangifera.Phone.Sensors.Accelerometer
         {
             if(!_isRunning)
             {
-                throw new Exception("Accelerometer must be started to get a reading!");
+                return null;
             }
             return _lastReading;
         }
