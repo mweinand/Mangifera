@@ -28,7 +28,9 @@ namespace Mangifera.Phone.Sensors.Location
                                    Latitude = e.Position.Location.Latitude,
                                    Longitude = e.Position.Location.Longitude,
                                    Speed = e.Position.Location.Speed,
-                                   Timestamp = e.Position.Timestamp
+                                   Timestamp = e.Position.Timestamp,
+                                   VerticalAccuracy = e.Position.Location.VerticalAccuracy,
+                                   HorizontalAccuracy = e.Position.Location.HorizontalAccuracy
                                };
         }
 

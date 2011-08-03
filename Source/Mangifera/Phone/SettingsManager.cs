@@ -6,12 +6,22 @@ namespace Mangifera.Phone
     {
         public TType Get<TType>(string name)
         {
+            return Get(name, default(TType));
+        }
+
+        public TType Get<TType>(string name, TType defaultValue)
+        {
             if (!IsolatedStorageSettings.ApplicationSettings.Contains(name))
             {
-                return default(TType);
+                return defaultValue;
             }
-            var data = (TType) IsolatedStorageSettings.ApplicationSettings[name];
+            var data = (TType)IsolatedStorageSettings.ApplicationSettings[name];
             return data;
+        }
+
+        public bool Contains(string name)
+        {
+            return IsolatedStorageSettings.ApplicationSettings.Contains(name);
         }
 
         public void Put(string name, object data) {

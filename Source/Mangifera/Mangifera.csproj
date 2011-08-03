@@ -61,6 +61,7 @@
     <Compile Include="Messaging\Scheduler\CommandScheduler.cs" />
     <Compile Include="Messaging\Scheduler\ICommandScheduler.cs" />
     <Compile Include="Navigation\INavigationServiceWrapper.cs" />
+    <Compile Include="Phone\IPhoneAppService.cs" />
     <Compile Include="Phone\ISettingsManager.cs" />
     <Compile Include="Phone\Licensing\ITrialService.cs" />
     <Compile Include="Phone\Sensors\Accelerometer\AccelerometerWrapper.cs" />
